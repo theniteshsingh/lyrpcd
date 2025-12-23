@@ -23,16 +23,41 @@
             margin: 0 auto;
         }
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f05a28 0%, #f12711 100%);
             color: white;
-            padding: 30px 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            text-align: center;
+            padding: 18px 20px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .site-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        .site-title {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .site-tagline {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        .site-search input[type="text"] {
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: none;
+            min-width: 180px;
+            font-size: 13px;
         }
         h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
         nav {
             margin: 20px 0;
@@ -75,6 +100,11 @@
             font-size: 16px;
             line-height: 1.8;
         }
+        .song-title {
+            font-size: 22px;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
         .lyrics-content {
             white-space: pre-line;
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -111,7 +141,7 @@
                 padding: 10px;
             }
             h1 {
-                font-size: 22px;
+                font-size: 20px;
             }
             .metadata p {
                 font-size: 13px;
@@ -120,13 +150,21 @@
                 font-size: 14px;
                 padding: 15px;
             }
+            .site-search input[type="text"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Aye Dilruba - ऐ दिलरुबा</h1>
-        <p>Lyricspunch - Hindi Song Lyrics</p>
+    <header class="site-header">
+        <div class="site-brand">
+            <span class="site-title">Lyricspunch</span>
+            <span class="site-tagline">Hindi Song Lyrics</span>
+        </div>
+        <form class="site-search" action="index.html" method="get">
+            <input type="text" name="q" placeholder="Search lyrics..." />
+        </form>
     </header>
     
     <nav>
@@ -157,6 +195,7 @@
 </div>
     
     <div class="lyrics">
+        <h1 class="song-title">Aye Dilruba - ऐ दिलरुबा</h1>
         <div class="lyrics-title">LYRICS:</div>
         <div class="lyrics-content">
         ai dilruba, ai dilruba
